@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Train Scheduler</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- jQuery -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+    <!-- Moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js" integrity="sha256-ABVkpwb9K9PxubvRrHMkk6wmWcIHUE9eBxNZLXYQ84k="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="jumbotron jumbotron-fluid bg-dark">
+        <div class="container text-center">
+            <h1 class="display-4 text-white">Train Schedule</h1>
+            <p class="h4 text-white">Station 20</p>
+        </div>
+    </div>
+
+    <!-- Current Train Schedule Table -->
+
+    <div class="container" id="input-data">
+        <div class="row">
+
+            <div class="col-md"></div>
+            <div class="col-md-10">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-inline p-2 bg-light h5 text-dark li-train-name">Train Name: </li>
+                    <li class="list-group-item d-inline p-2 bg-dark h5 text-white li-destination">Destination: </li>
+                    <li class="list-group-item d-inline p-2 bg-light h5 text-dark li-frequency">Frequency (min): </li>
+                    <li class="list-group-item d-inline p-2 bg-dark h5 text-white li-next-arrival">Next Arrival: </li>
+                    <li class="list-group-item d-inline p-2 bg-light h5 text-dark li-minutes-away">Minutes Away: </li>
+                </ul>
+            </div>
+            <div class="col-md"></div>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Add Train Form -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md">
+            </div>
+            <div class="col-md-10">
+                <form>
+                    <div class="form-group">
+                        <label for="trainName">Train Name</label>
+                        <input type="text" class="form-control" id="train-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="destination">Destination</label>
+                        <input type="text" class="form-control" id="destination">
+                    </div>
+                    <div class="form-group">
+                        <label for="trainTime">Train Time (HH:mm - military time)</label>
+                        <input type="time" class="form-control" id="train-time">
+                    </div>
+                    <div class="form-group">
+                        <label for="frequency">Frequency</label>
+                        <input type="number" class="form-control" id="frequency">
+                    </div>
+                    <button type="submit" class="btn btn-dark submit-button">Submit</button>
+                </form>
+            </div>
+
+            <div class="col-md">
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <script type="text/javascript" src="assets/javascript/train.js"></script>
+    <script type="text/javascript" src="assets/javascript/moment.js"></script>
+
+</body>
+
+</html>
